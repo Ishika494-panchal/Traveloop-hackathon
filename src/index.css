@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-traveloop-slate/40;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply min-h-screen overflow-x-hidden bg-[#0B0F1A] text-traveloop-ice antialiased;
+    background-image:
+      radial-gradient(ellipse 120% 80% at 10% -10%, rgba(136, 189, 242, 0.12), transparent 55%),
+      radial-gradient(ellipse 90% 70% at 100% 0%, rgba(106, 137, 167, 0.14), transparent 50%);
+  }
+}
+
+@layer utilities {
+  .text-gradient-hero {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #eaf4ff 0%, #bdddfc 35%, #88bdf2 70%, #6a89a7 100%);
+  }
+
+  .auth-form-scroll {
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .auth-form-scroll::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
